@@ -1,0 +1,1 @@
+<node node_id="{$node.node_id}" name="{$node.name|washxml}" url_alias="{$node.url_alias}" />

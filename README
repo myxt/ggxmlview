@@ -1,0 +1,30 @@
+XML View extension for eZ publish
+===================================
+
+This extension enables a simple, universal publication of content as xml or json,
+such as can be consumed eg. by XmlHttpRequests requests or flash clients.
+It uses a very basic mapping of class attributes to xml elements, but since it
+is 100% template based, it can be overridden to provide any custom mapping
+
+
+License
+=======
+GNU General Public License v2.0
+
+
+Requirements
+============
+o  eZ publish version: Make sure you use eZ publish version 4.0 or higher.
+o  PHP version: as indicated in your eZ publish version requirements
+o  Web Browser: no spcific requirements
+
+
+Installation
+============
+Please read the INSTALL file for installation instructions.
+
+
+Troubleshooting
+===============
+For more documentation look under doc/
+For all problems/questions, please post to the extension forums on projects.ez.no

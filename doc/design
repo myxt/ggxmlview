@@ -1,0 +1,15 @@
+GOALS:
+------
++ provide an easy way to hook up ezP out-of-the-box to "web 2.0" clients by way of a default json/xml/other representation of ez content
++ make use of the templating engine for taking advantage of caching, cascading and override mechanisms
++ use the same class/members names in json notation that are used in template language. This way js code using them can be almost identical to tpl code
++ provide an auto-generated xsd description for the generated xml, so that it can be validated
++ use as much as possible the same structure for the generated xml as for the generated json, unless where xsd limitations take precedence
+
+DECISIONS:
+----------
++ create a "line" view for children of current node or just use plain full? at the moment we stick with full view, fully recursive
++ for xml, what to use as attribute elements: type, name or attribute? try out if name works out with an xsd (seems to work)
++ for xml, what to use as obj elements: type, name or attribute? the same that has been done in json leads to indeterministic xsd => use class name
++ list of attributes to be displayed for nodes, obj and attributes?
++ for json, always encapsulate nodes in an external json-object element?

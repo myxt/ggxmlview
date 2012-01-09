@@ -1,0 +1,21 @@
+- improve links to embedded objects in ezxmltext attributes: try to show node id, not object id nor full url alias
+- create std templates (json,xml) for all datatypes
+- create xsd templates to be generated on class view (ok) => finish definition of all datatypes
+- verify if the data encoded in json/xml is enough to be used in fromstring method for import in another instance
+
+- add a package with a couple of objects that contain all existing datatypes, one empty and one full, for testing
+- finish tpl operators to do xml washing (charset conversion?)
+- fix std debug class to handle echoing inside an xml comment instead of html or popup => to be done via kernel overriding. Right now nothing guarantees that invalid xml is emitted and breaks the comment tags. Json comment tags can also be broken by a "*/" sequence...
+- find a way to have ez errors still routed in an xml page => creating an xml module + using setErrorModule inside (???) / propose it as an alternative in pagelayout module?
+- add hooks for xslt transforms
+- ...
+- profit!
+
+no - create "xml" module that does the same as pagelayout but with better paths, eg index.php/xml/contentalias instead of layout/set/xml/content/view/xml/contentalias =>
+     a plain url alias / wildcard url alias is enough for that
+no - same with json
+     (see above)
+ok - decide:
+     if xsd file has public access or needs a function access to be displayed -> not public by default
+     the exact list of node and object metadata that are part of templates -> all that is available in ez objects but not marked "dynamic"
+ok - build std node template with at least all obj attributes and children

@@ -1,0 +1,14 @@
+Release 0.2 - 2010.03.20
+
+Added a template operator: $obj | to_array( $level=2, $attributes=array() )
+
+It allows encoding to php array any ezpersistentobject (ie. all the 'objects' in
+the online manual http://ez.no/doc/ez_publish/technical_manual/4_x/reference/objects)
+It is useful for data export as well as using json_encode / xml_encode from ezjscore.
+
+example usage: {$current_user|to_array(1)|json_encode}
+
+The 1st param is the nesting level used for subjoctes (same as |attribute() does).
+
+The 2nd param, if non empty, is a filter on the attributes of $obj that will be
+returned (note: it is not applied recursively).
